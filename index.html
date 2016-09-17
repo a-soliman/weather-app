@@ -1,37 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Weather App</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-	</head>
-	<body>
-		<div id="weather">
-			<p><span id="temp"></span></p>
-			<p><span id="wind"></span></p>
-		</div>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700,inherit,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
 
+<body class="body page-index clearfix">
+  <div class="container clearfix">
+    <p class="location"></p>
+    <p class="temperature"></p>
+    <div class="climate_bg"></div>
+    <div class="info_bg">
+      <img class="dropicon" src="images/Droplet.svg">
+      <p class="humidity"></p>
 
+      <img class="windicon" src="images/Wind.svg">
+      <div class="windspeed"></div>
+    </div>
+  </div>
 
+  <div class="error"></div>
+  
 
-
-		<!-- ******Jquery GOOGLE CDN***** -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-			var weather = new XMLHttpRequest()
-			weather.open("Get", "http://api.wunderground.com/api/b46729b99ec9bcde/conditions/q/CA/San_Francisco.json", false )
-			weather.send(null)
-
-			var r = JSON.parse(weather.response)
-			var dis = "Current Location" + r.current_observation.display_location.full + "<br />"
-			var temp = r.current_observation.temperature_string + "<br />"
-			var wind = r.current_observation.wind_string + "<br />"
-
-			
-
-
-		</script>
-	</body>
+ 
+</body>
 </html>
