@@ -11,3 +11,9 @@ if(!"geolocation" in navigator) {
 
 	})
 }
+
+// refreshing the weather regulary
+$(document).ready(function() {
+	setInterval(getWeather, 10000)
+
+})
