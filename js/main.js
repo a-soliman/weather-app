@@ -44,3 +44,9 @@ function loadWeather(location, woeid) {
 			//forecast
 			var forecast =  weather.forecast
 			forecast.shift()
+
+			for(var i = 0; i < 6 ; i++) {
+				var day = forecast[i].day
+				var icon = 'img/weathericons/' + forecast[i].code + '.png'
+				var forecastTemp = forecast[i].high + '/' + forecast[i].low
+				var forecastText = forecast[i].text
