@@ -50,3 +50,12 @@ function loadWeather(location, woeid) {
 				var icon = 'img/weathericons/' + forecast[i].code + '.png'
 				var forecastTemp = forecast[i].high + '/' + forecast[i].low
 				var forecastText = forecast[i].text
+
+				$('.day-name-' + [i]).html(day)
+				$('.day-image-' + [i]).attr("src", icon)
+				$('.day-text-' + [i]).html(forecastText)
+				$('.day-temp-' + [i]).html(forecastTemp)
+
+			}
+
+		},
