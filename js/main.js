@@ -39,3 +39,8 @@ function loadWeather(location, woeid) {
 			$('.status').html(text)
 			$('.high').html(high)
 			$('.low').html(low)
+
+			//----------------------------------------------------------------------------------------
+			//forecast
+			var forecast =  weather.forecast
+			forecast.shift()
