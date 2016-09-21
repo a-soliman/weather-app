@@ -31,3 +31,11 @@ function loadWeather(location, woeid) {
 			text = weather.text
 			high = weather.forecast[0].high
 			low = weather.forecast[0].low
+
+			// sending the results to the outut
+			$('.location').text(city)
+			$('.temp').html(temp)
+			$('.image').html(wcode)
+			$('.status').html(text)
+			$('.high').html(high)
+			$('.low').html(low)
