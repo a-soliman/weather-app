@@ -17,3 +17,17 @@ $(document).ready(function() {
 	setInterval(getWeather, 10000)
 
 })
+
+//load weather function
+function loadWeather(location, woeid) {
+	$.simpleWeather({
+		location: location,
+		woeid: woeid,
+		unit: 'f',
+		success: function(weather) {
+			city = weather.city
+			temp = weather.temp + '&deg;'
+			wcode = '<img class=weathericon src="img/weathericons/' + weather.code + '.png">'
+			text = weather.text
+			high = weather.forecast[0].high
+			low = weather.forecast[0].low
