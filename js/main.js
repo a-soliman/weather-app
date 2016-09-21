@@ -59,3 +59,9 @@ function loadWeather(location, woeid) {
 			}
 
 		},
+		//setting up an error message
+		error: function(error) {
+			$('.error').html('<p>' + error + '</p>')
+		}
+	})
+}
